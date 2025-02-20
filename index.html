@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort Names</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f8f6; /* Soft pastel green background */
+        color: #333;
+      }
+      h2 {
+        color: #4f5d75; /* Soft blue-gray color for headings */
+        margin-bottom: 20px;
+      }
+      .container {
+        width: 90%;
+        max-width: 500px;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        margin: auto;
+      }
+      textarea {
+        width: 90%;
+        height: 130px;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background-color: #fafafa; /* Very light gray background */
+        resize: none;
+        box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      textarea:focus {
+        outline: none;
+        border-color: #6c8c7b; /* Soft muted green focus color */
+        box-shadow: 0px 0px 5px rgba(108, 140, 123, 0.5);
+      }
+      #outputNames {
+        background-color: #f4f4f4; /* Lighter shade for the output area */
+        cursor: not-allowed;
+      }
+      button {
+        font-size: 14px;
+        padding: 10px 20px;
+        background: linear-gradient(
+          135deg,
+          #7f8c8d,
+          #95a5a6
+        ); /* Soft grayish gradient */
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        display: inline-block;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      button:hover {
+        background: linear-gradient(
+          135deg,
+          #95a5a6,
+          #7f8c8d
+        ); /* Reversed gradient for hover effect */
+        transform: scale(1.05);
+      }
+      button:active {
+        transform: scale(0.98);
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sort Alphabetically</h2>
+      <textarea
+        id="inputNames"
+        placeholder="Enter names, one per line..."
+      ></textarea>
+      <button id="processButton">Sort</button>
+      <textarea
+        id="outputNames"
+        placeholder="Sorted names will appear here..."
+        readonly
+      ></textarea>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
